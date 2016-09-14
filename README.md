@@ -1,0 +1,3 @@
+```
+Usage: adhocnet <SSID> <Password>
+```
