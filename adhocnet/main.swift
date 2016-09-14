@@ -5,6 +5,9 @@
 //  Created by Joe Hildebrand on 11/14/15.
 //  Copyright © 2015 Joe Hildebrand. All rights reserved.
 //
+//  Based on the discussion at:
+//  http://stackoverflow.com/questions/31342348/programmatically-create-ad-hoc-network-os-x
+//
 
 import Foundation
 import CoreWLAN
@@ -26,8 +29,7 @@ if let iface = CWWiFiClient.sharedWiFiClient().interface() {
             networkName.dataUsingEncoding(NSUTF8StringEncoding)!,
             security: CWIBSSModeSecurity.WEP104,
             channel: 11,
-            password: password as String
-        )
+            password: password as String)
         print("Success")
     } catch let error as NSError {
         print("Error", error)
